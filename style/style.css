@@ -40,6 +40,7 @@ header {
   text-align: center;
 }
 
+
 header img {
   display: inline-block;
   height: 20em;
@@ -54,8 +55,32 @@ header h4 {
   color: white;
 }
 
+.footer-title {
+    margin-top: 1em;
+    padding-top: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
 }
 
+footer {
+    padding: 5vw 2em;
+}
+
+/* Brand-specific styling - thanks to https://brandcolors.net/ */
+.github-invertocat {
+    color: #999999;
+}
+
+.github-invertocat:hover {
+    color: #666666;
+}
+
+.linkedin-ico {
+    color: #0077b5;
+}
+
+.linkedin-ico:hover {
+    color: #00a0dc;
 }
 
 .opaquebox {
@@ -71,4 +96,8 @@ header h4 {
 
 .container-max {
     width: 100%;
+}
+
+.wow {
+   visibility: hidden;
 }

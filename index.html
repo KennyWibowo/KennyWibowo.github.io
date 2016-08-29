@@ -13,7 +13,10 @@
 
         <!-- Font Awesome -->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-        
+
+        <!-- Animate + WOW.js -->
+        <link rel="stylesheet" type="text/css" href="style/animate.min.css">
+
         <!-- Custom CSS -->
         <link rel="stylesheet" type="text/css" href="style/style.css">
 
@@ -41,16 +44,37 @@
             <h1 class="text-center"><span class="glyphicon glyphicon-time"></span> Under Construction.. Come back in a bit!</h1>
         </main>
 
-            <footer class="container">
-                <aside class="text-center">
-                    Let's get in <a href="https://www.linkedin.com/in/kennywibowo">touch!</a>
-                </aside>
-                <div>
+        <footer class="container">
+            <aside class="text-center">
 
+                <div class="col-md-12 footer-title">
+                    <h3>Let's get in touch!</a></h3>
                 </div>
-            </footer>
-        </main>
 
+                <div class="col-xs-4 col-md-4">
+                    <a class="linkedin-ico" href="https://www.linkedin.com/in/kennywibowo">
+                        <i class="fa fa-linkedin-square fa-5x wow bounceInUp" aria-hidden="true"></i>
+                    </a>
+                </div>
 
+                <div class="col-xs-4 col-md-4">
+                    <a class="github-invertocat" href="https://github.com/KennyWibowo">
+                        <i class="fa fa-github fa-5x wow fadeInUp" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="col-xs-4 col-md-4">
+                    <a class="" href="mailto:kewibowo@ucsd.edu">
+                        <i class="fa fa-envelope fa-5x wow rotateInUpLeft" aria-hidden="true"></i>
+                    </a>
+                </div>
+                
+            </aside>
+
+            <script src="js/wow.min.js"></script>
+            <script>
+                new WOW().init();
+            </script>
+        </footer>
     </body>
 </html>
