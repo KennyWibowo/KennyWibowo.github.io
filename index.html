@@ -1,30 +1,37 @@
+<!DOCTYPE html>
+
 <html>
     <head>
         <title>Kenny Wibowo</title>
 
         <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" crossorigin="anonymous"></script>
 
         <!-- Bootstrap stuff -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        
+
+        <!-- Font Awesome -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+        <!-- Animate + WOW.js -->
+        <link rel="stylesheet" type="text/css" href="style/animate.min.css">
+
         <!-- Custom CSS -->
         <link rel="stylesheet" type="text/css" href="style/style.css">
 
     </head>
 
     <body>
-
         <header class="container container-max">
             <div class="col-md-12">
-                <img id="logo" class="img-circle" src="res/me.jpg" alt="Me!">
+                <img id="logo" class="img-circle wow fadeIn" src="res/me.jpg" alt="Me!">
             </div>
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <h1>Hi There!</h1>
                 <hr>
-                <div class="opaquebox shadow">
+                <div class="opaquebox shadow wow fadeIn">
                     <h4 class="text-center">My name is Kenny Wibowo, and I am currently pursuing my undergraduate in Computer Science (B.S.) at <a href="http://ucsd.edu/">UC San Diego.</a> I am a full-stack developer with a passion in learning new technologies and creating fun and interesting stuff!
                     </h4>
                 </div>
@@ -32,19 +39,45 @@
             <div class="col-md-3"></div>
         </header>
 
-        <main>
+        <main class="container">
             <h1 class="text-center"><span class="glyphicon glyphicon-time"></span> Under Construction.. Come back in a bit!</h1>
-
-            <footer class="container">
-                <aside class="text-center">
-                    Let's get in <a href="https://www.linkedin.com/in/kennywibowo">touch!</a>
-                </aside>
-                <div>
-
-                </div>
-            </footer>
         </main>
 
+        <footer class="container">
+            <aside class="text-center">
 
+                <div class="col-md-12 footer-title wow fadeInUp">
+                    <h3>Let's get in touch!</a></h3>
+                </div>
+
+                <div class="col-xs-4 col-md-4">
+                    <a class="linkedin-ico" href="https://www.linkedin.com/in/kennywibowo">
+                        <i class="fa fa-linkedin-square fa-5x wow fadeInUp" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="col-xs-4 col-md-4">
+                    <a class="github-invertocat" href="https://github.com/KennyWibowo">
+                        <i class="fa fa-github fa-5x wow fadeInUp" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="col-xs-4 col-md-4">
+                    <a class="" href="mailto:kewibowo@ucsd.edu">
+                        <i class="fa fa-envelope fa-5x wow fadeInUp" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="col-md-12 footer-content wow fadeInUp">
+                    Website put together by Kenny Wibowo
+                </div>
+
+            </aside>
+
+            <script src="js/wow.min.js"></script>
+            <script>
+                new WOW().init();
+            </script>
+        </footer>
     </body>
 </html>

@@ -9,22 +9,9 @@ hr {
     max-width: 50px
 }
 
-main,
-p {
-    margin: 0 auto;
-    max-width: 60em;
-    line-height: 1.5;
-    padding: 4em 1em;
-    color: #555;
-}
-
 h2 {
     margin-top: 1em;
     padding-top: 1em;
-}
-
-img {
-    padding: 3px;
 }
 
 h1,
@@ -45,9 +32,10 @@ header {
   background-size: cover;
   line-height: 1.2;
   max-width: none;
-  padding: 10vw 2em;
+  padding: 15vw 2em;
   text-align: center;
 }
+
 
 header img {
   display: inline-block;
@@ -63,22 +51,33 @@ header h4 {
   color: white;
 }
 
-.fancybutton {
-  border: 1px solid #e81c4f;
-  border-radius: 290486px;
-  color: white;
-  font-size: 0.6em;
-  letter-spacing: 0.2em;
-  padding: 1em 2em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: none 200ms ease-out;
-  transition-property: color, background;
+.footer-title,
+.footer-content {
+    margin-top: 1em;
+    padding-top: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
 }
 
-.fancybutton:hover {
-  background:  #e81c4f;
-  color: white;
+footer {
+    padding: 5vw 2em;
+}
+
+/* Brand-specific styling - thanks to https://brandcolors.net/ */
+.github-invertocat {
+    color: #999999;
+}
+
+.github-invertocat:hover {
+    color: #666666;
+}
+
+.linkedin-ico {
+    color: #0077b5;
+}
+
+.linkedin-ico:hover {
+    color: #00a0dc;
 }
 
 .opaquebox {
