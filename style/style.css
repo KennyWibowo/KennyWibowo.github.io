@@ -54,22 +54,8 @@ header h4 {
   color: white;
 }
 
-.fancybutton {
-  border: 1px solid #e81c4f;
-  border-radius: 290486px;
-  color: white;
-  font-size: 0.6em;
-  letter-spacing: 0.2em;
-  padding: 1em 2em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: none 200ms ease-out;
-  transition-property: color, background;
 }
 
-.fancybutton:hover {
-  background:  #e81c4f;
-  color: white;
 }
 
 .opaquebox {
