@@ -9,15 +9,6 @@ hr {
     max-width: 50px
 }
 
-main,
-p {
-    margin: 0 auto;
-    max-width: 60em;
-    line-height: 1.5;
-    padding: 4em 1em;
-    color: #555;
-}
-
 h2 {
     margin-top: 1em;
     padding-top: 1em;
