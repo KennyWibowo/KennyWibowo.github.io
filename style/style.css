@@ -51,7 +51,8 @@ header h4 {
   color: white;
 }
 
-.footer-title {
+.footer-title,
+.footer-content {
     margin-top: 1em;
     padding-top: 1em;
     margin-bottom: 1em;
