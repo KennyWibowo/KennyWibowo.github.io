@@ -53,9 +53,9 @@ header {
 
 header img {
   display: inline-block;
-  height: 120px;
+  height: 200px;
   vertical-align: top;
-  width: 120px;
+  width: 200px;
 }
 
 header h1 {
