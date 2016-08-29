@@ -5,7 +5,12 @@ body {
     margin: 0 auto;
 }
 
-main {
+hr {
+    max-width: 50px
+}
+
+main,
+p {
     margin: 0 auto;
     max-width: 60em;
     line-height: 1.5;
@@ -32,13 +37,6 @@ a {
     color: #fd9696;
 }
 
-.center {
-    margin: auto;
-    width: 50%;
-    text-align: center;
-    padding: 10px;
-}
-
 header {
   background-color: #9696fd;
   background-image: url("../res/WarrenBear.png");
@@ -58,9 +56,9 @@ header img {
   width: 200px;
 }
 
-header h1 {
+header h1,
+header h3 {
   color: white;
-  font-size: 2.5em;
 }
 
 header a {
@@ -79,4 +77,14 @@ header a {
 header a:hover {
   background:  #e81c4f;
   color: white;
+}
+
+.shadow {
+    -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.container-max {
+    width: 100%;
 }
