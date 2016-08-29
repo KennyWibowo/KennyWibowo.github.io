@@ -34,7 +34,7 @@ strong {
 }
 
 a {
-    color: #fd9696;
+    color: #96cafd;
 }
 
 header {
@@ -61,7 +61,7 @@ header h3 {
   color: white;
 }
 
-header a {
+.fancybutton {
   border: 1px solid #e81c4f;
   border-radius: 290486px;
   color: white;
@@ -74,7 +74,7 @@ header a {
   transition-property: color, background;
 }
 
-header a:hover {
+.fancybutton:hover {
   background:  #e81c4f;
   color: white;
 }
