@@ -31,20 +31,20 @@
     </head>
 
     <body>
-        <header class="container-fluid">
-                <div class="col-md-12">
-                    <img class="shadow img-circle wow fadeIn" src="res/me.jpg" alt="Me!">
+        <header class="place-flow container-fluid" data-hi-res="http://wibow.io/res/WarrenBear.png" data-low-res="http://wibow.io/res/WarrenBear_small.jpg">
+            <div class="col-md-12">
+                <img class="shadow img-circle wow fadeIn" src="res/me.jpg" alt="Me!">
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h1>Hi There!</h1>
+                <hr>
+                <div class="opaquebox shadow wow fadeIn">
+                    <h4 class="text-center">My name is Kenny Wibowo, and I am currently pursuing my undergraduate in Computer Science (B.S.) at <a href="http://ucsd.edu/">UC San Diego.</a> I am a full-stack developer with a passion in learning new technologies and creating fun and interesting stuff!
+                    </h4>
                 </div>
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <h1>Hi There!</h1>
-                    <hr>
-                    <div class="opaquebox shadow wow fadeIn">
-                        <h4 class="text-center">My name is Kenny Wibowo, and I am currently pursuing my undergraduate in Computer Science (B.S.) at <a href="http://ucsd.edu/">UC San Diego.</a> I am a full-stack developer with a passion in learning new technologies and creating fun and interesting stuff!
-                        </h4>
-                    </div>
-                </div>
-                <div class="col-md-3"></div>
+            </div>
+            <div class="col-md-3"></div>
         </header>
         <div class="header-placeholder">
         </div>
@@ -117,6 +117,11 @@
             <script src="js/wow.min.js"></script>
             <script>
                 new WOW().init();
+            </script>
+
+            <script src="https://cdn.rawgit.com/KennyWibowo/PlaceFlow/2d7d2ddbe3ec2075878d44e866ff55b5509b9b3b/dist/placeflow.js"></script>
+            <script>
+                new PlaceFlow().init();
             </script>
         </footer>
     </body>
