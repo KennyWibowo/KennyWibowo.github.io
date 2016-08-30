@@ -26,31 +26,30 @@ a {
 }
 
 header {
-  background-color: #affdfd;
-  background-image: url("../res/WarrenBear.png");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  line-height: 1.2;
-  max-width: none;
-  padding: 15vw 2em;
-  text-align: center;
+    background-image: url("../res/WarrenBear.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    line-height: 1.2;
+    max-width: none;
+    padding: 15vw 2em;
+    text-align: center;
 }
 
 
 header img {
-  display: inline-block;
-  height: 20em;
-  vertical-align: top;
-  width: 20em;
+    display: inline-block;
+    height: 20em;
+    vertical-align: top;
+    width: 20em;
 }
 
 header h1,
 header h2,
 header h3,
 header h4 {
-  color: white;
+    color: white;
 }
 
 .footer-title,
@@ -105,7 +104,8 @@ footer {
 }
 
 .ico {
-    padding: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 .opaquebox {
