@@ -103,13 +103,13 @@ footer {
 
 .opaquebox {
     padding: 1em;
-    background-color: rgba(0,0,0,.35);
+    background-color: rgba(0,0,0,.5);
 }
 
 .shadow {
-    -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    -moz-box-shadow: 0 6px 12px rgba(0,0,0,.4);
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.4);
+    box-shadow: 0 6px 12px rgba(0,0,0,.4);
 }
 
 .container-max {
