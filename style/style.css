@@ -65,11 +65,12 @@ footer {
 }
 
 /* Brand-specific styling - thanks to https://brandcolors.net/ */
-.github-invertocat {
+
+.github-invertocat-ico {
     color: #999999;
 }
 
-.github-invertocat:hover {
+.github-invertocat-ico:hover {
     color: #666666;
 }
 
@@ -77,9 +78,11 @@ footer {
     color: #0077b5;
 }
 
-.linkedin-ico:hover {
-    color: #00a0dc;
+.facebook-ico {
+    color: #3b5998;
 }
+
+/* */
 
 .opaquebox {
     padding: 1em;
