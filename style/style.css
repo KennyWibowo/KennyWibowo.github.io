@@ -97,6 +97,12 @@ footer {
     height: 5em;
 }
 
+.npm-ico:hover {
+    -moz-box-shadow: 0 6px 12px rgba(0,0,0,.4);
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.4);
+    box-shadow: 0 6px 12px rgba(0,0,0,.4);
+}
+
 .ico {
     padding: 2em;
 }
