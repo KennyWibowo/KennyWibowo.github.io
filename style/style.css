@@ -82,7 +82,24 @@ footer {
     color: #3b5998;
 }
 
-/* */
+.spotify-ico {
+    color: #2ebd59;
+}
+
+.spotify-ico:hover {
+    color: #1f7f3c;
+}
+
+/* Custom CSS */
+
+.npm-ico {
+    width: 5em;
+    height: 5em;
+}
+
+.ico {
+    padding: 2em;
+}
 
 .opaquebox {
     padding: 1em;
