@@ -98,56 +98,6 @@ footer {
     padding: 5vw 2em;
 }
 
-/* Brand-specific styling - thanks to https://brandcolors.net/ */
-
-.github-invertocat-ico {
-    color: #999999;
-}
-
-.github-invertocat-ico:hover {
-    color: #666666;
-}
-
-.linkedin-ico {
-    color: #0077b5;
-}
-
-.facebook-ico {
-    color: #3b5998;
-}
-
-.spotify-ico {
-    color: #2ebd59;
-}
-
-.spotify-ico:hover {
-    color: #1f7f3c;
-}
-
-/* Custom CSS */
-
-.npm-ico {
-    width: 5em;
-    height: 5em;
-}
-
-.npm-ico:hover {
-    -moz-box-shadow: 0 6px 12px rgba(0,0,0,.4);
-    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.4);
-    box-shadow: 0 6px 12px rgba(0,0,0,.4);
-}
-
-.ico-box {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-
-.ico {
-    color: #4ba4fc;
-}
-
 .opaquebox {
     padding: 1em;
     background-color: rgba(0,0,0,.7);
