@@ -8,6 +8,9 @@
         <meta name="theme-color" content="#64b1fc" />
         <meta name=viewport content="width=device-width, initial-scale=1">
 
+        <!-- loadCSS - loading CSS asynchronously -->
+        <script async src="js/loadCSS.js"></script>
+
         <!-- HTML5 shiv for stabbing IE 8 -->
         <!--[if lt IE 9]>
             <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -17,23 +20,29 @@
         <script async src="https://code.jquery.com/jquery-3.1.0.min.js" crossorigin="anonymous"></script>
 
         <!-- Bootstrap stuff -->
-        <link async rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></noscript>
         <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
         <!-- Font Awesome -->
-        <link async rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+        <link rel="preload" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" as="style" onload="this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"></noscript>
 
         <!-- Font Mfizz-->
-        <link async rel="stylesheet" href="style/font-mfizz/font-mfizz.css">
+        <link rel="preload" href="style/font-mfizz/font-mfizz.css" as="style" onload="this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="style/font-mfizz/font-mfizz.css"></noscript>
 
-        <!-- Animate.css & WOW.js -->
+        <!-- Animate.css and WOW.js -->
         <link async rel="stylesheet" type="text/css" href="style/animate.min.css">
+        <link rel="preload" href="style/animate.min.css" as="style" onload="this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="style/animate.min.css"></noscript>
         <script src="js/wow.min.js"></script>
 
         <!-- Custom CSS -->
-        <link async rel="stylesheet" type="text/css" href="style/style-main.css">
-        <link async rel="stylesheet" type="text/css" href="style/style-brands.css">
-
+        <link rel="preload" href="style/style-main.css" as="style" onload="this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="style/style-main.css"></noscript>
+        <link rel="preload" href="style/style-brands.css" as="style" onload="this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="style/style-brands.css"></noscript>
         <!-- PlaceFlow.js -->
         <script src="https://cdn.rawgit.com/KennyWibowo/PlaceFlow/0.0.1/dist/placeflow.js"></script>
     </head>
@@ -222,7 +231,7 @@
 
                 <div class="ico-box col-xs-4 col-md-4">
                     <a alt="NPM" class="" href="https://www.npmjs.com/~kennywibowo">
-                        <img src="/res/icons/npm.png" class="npm-ico wow fadeInUp" aria-hidden="true">
+                        <img src="res/icons/npm.png" class="npm-ico wow fadeInUp" aria-hidden="true">
                     </a>
                 </div>
 
