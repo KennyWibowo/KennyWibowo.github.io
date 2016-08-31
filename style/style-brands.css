@@ -11,6 +11,52 @@
     margin-bottom: 2em;
 }
 
+/* Experience Section */
+
+.logo {
+    max-width: 20em;
+    padding-bottom: 1em;
+    max-height: 10em;
+}
+
+.hpe-link {
+    color: rgb(0, 177, 136);
+}
+
+.hpe-link:hover {
+    color: black;
+}
+
+
+/* Language Section -  manual padding to center */
+
+.java-ico {
+    margin-left: 0.45em;
+}
+
+.javascript-ico {
+    margin-left: 0.25em;
+}
+
+.python-ico {
+    margin-left: 0.2em;
+}
+
+.c-ico {
+    margin-left: 0.25em;
+}
+
+.cplusplus-ico {
+    margin-left: 0em;
+}
+
+.rpi-ico {
+    margin-left: 0.25em;
+}
+
+
+/* Contact/Interest Section */
+
 .github-invertocat-ico {
     color: #999999;
 }
@@ -44,18 +90,4 @@
     -moz-box-shadow: 0 6px 12px rgba(0,0,0,.4);
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.4);
     box-shadow: 0 6px 12px rgba(0,0,0,.4);
-}
-
-.logo {
-    max-width: 20em;
-    padding-bottom: 1em;
-    max-height: 10em;
-}
-
-.hpe-link {
-    color: rgb(0, 177, 136);
-}
-
-.hpe-link:hover {
-    color: black;
 }
