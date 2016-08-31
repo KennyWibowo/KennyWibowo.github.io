@@ -1,5 +1,17 @@
 /* Brand-specific styling - thanks to https://brandcolors.net/ */
 
+.ico {
+    max-width: 20em;
+    color: #4ba4fc;
+}
+
+.ico-box {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
 .github-invertocat-ico {
     color: #999999;
 }
@@ -24,8 +36,6 @@
     color: #1f7f3c;
 }
 
-/* Custom CSS */
-
 .npm-ico {
     width: 5em;
     height: 5em;
@@ -35,16 +45,4 @@
     -moz-box-shadow: 0 6px 12px rgba(0,0,0,.4);
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.4);
     box-shadow: 0 6px 12px rgba(0,0,0,.4);
-}
-
-.ico-box {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-
-.ico {
-    max-width: 20em;
-    color: #4ba4fc;
 }
