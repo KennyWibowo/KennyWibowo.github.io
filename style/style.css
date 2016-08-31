@@ -54,10 +54,26 @@ header img {
     width: 20em;
 }
 
+.header-pic {
+    margin: 0 auto;
+}
+
+.header-text {
+    margin-top: 1em;
+    padding-top: 1em;    
+}
+
+.header-content {
+    margin: 0 auto;
+    width: fit-content !important;
+    text-align: center;
+}
+
 header h1,
 header h2,
 header h3,
 header h4 {
+    text-shadow: 1px 1px #000000;
     color: white;
 }
 
@@ -123,7 +139,7 @@ footer {
 
 .opaquebox {
     padding: 1em;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.7);
 }
 
 .shadow {
