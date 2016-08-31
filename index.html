@@ -21,7 +21,10 @@
         <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
         <!-- Font Awesome -->
-        <link async href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+        <link async rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+        <!-- Font Mfizz-->
+        <link async rel="stylesheet" href="style/font-mfizz/font-mfizz.css">
 
         <!-- Animate.css & WOW.js -->
         <link async rel="stylesheet" type="text/css" href="style/animate.min.css">
@@ -37,13 +40,13 @@
     <body>
         <header class="place-flow container-fluid" data-hi-res="http://wibow.io/res/WarrenBear.png" data-low-res="http://wibow.io/res/WarrenBear_small.jpg">
             <div class="col-md-12">
-                <img class="shadow img-circle wow fadeIn" src="res/me.jpg" alt="Me!">
+                <img class="shadow img-circle wow fadeIn" data-wow-duration="2s" src="res/me.jpg" alt="Me!">
             </div>
             <div class="col-md-3"></div>
-            <div class="col-md-6">
+            <div class="col-md-6 wow fadeIn" data-wow-duration="2s">
                 <h1>Hi There!</h1>
                 <hr>
-                <div class="opaquebox shadow wow fadeIn">
+                <div class="opaquebox shadow">
                     <h4 class="text-center">My name is Kenny Wibowo, and I am currently pursuing my undergraduate in Computer Science (B.S.) at <a href="http://ucsd.edu/">UC San Diego.</a> I am a full-stack developer with a passion in learning new technologies and creating fun and interesting stuff!
                     </h4>
                 </div>
@@ -51,13 +54,51 @@
             <div class="col-md-3"></div>
         </header>
 
-        <main class="container">
-            <h2 class="text-center">
-                Under Construction.. Come back in a bit for more!
-            </h2>
+        <main class="container-fluid">
+            <div class="container-fluid language-section">
+                <div class="container">
+                    <h2 class="col-xs-12 col-md-12 text-center">Languages I've Used</h2>
+                    <div class="col-xs-12 col-md-12">
+                        <hr>
+                    </div>
+
+                    <!-- ROW 1 -->
+
+                    <div class="ico-box col-xs-4 col-md-2 wow bounceIn">
+                        <i class="ico fa icon-java fa-5x" aria-hidden="true"></i>
+                        <h4>Java</h4>
+                    </div>
+
+                    <div class="ico-box col-xs-4 col-md-2 wow bounceIn">
+                        <i class="ico fa icon-javascript fa-5x" aria-hidden="true"></i>
+                        <h4>JavaScript</h4>
+                    </div>
+
+                    <div class="ico-box col-xs-4 col-md-2 wow bounceIn">
+                        <i class="ico fa icon-python fa-5x" aria-hidden="true"></i>
+                        <h4>Python</h4>
+                    </div>
+
+                    <div class="ico-box col-xs-4 col-md-2 wow bounceIn">
+                        <i class="ico fa icon-java fa-5x" aria-hidden="true"></i>
+                        <h4>Java</h4>
+                    </div>
+
+                    <div class="ico-box col-xs-4 col-md-2 wow bounceIn">
+                        <i class="ico fa icon-javascript fa-5x" aria-hidden="true"></i>
+                        <h4>JavaScript</h4>
+                    </div>
+
+                    <div class="ico-box col-xs-4 col-md-2 wow bounceIn">
+                        <i class="ico fa icon-python fa-5x" aria-hidden="true"></i>
+                        <h4>Python</h4>
+                    </div>
+
+                </div>
+            </div>
 
             <h3 class="text-center">
-                For now, check out <a href="https://kennywibowo.github.io/ConnectFall/">my twist on Connect Four.</a>
+                Check out <a href="https://kennywibowo.github.io/ConnectFall/">my twist on Connect Four.</a>
             </h3>
         </main>
 
@@ -71,19 +112,19 @@
 
                 <!-- ROW 1 -->
 
-                <div class="ico col-xs-4 col-md-4">
+                <div class="ico-box col-xs-4 col-md-4">
                     <a class="linkedin-ico" href="https://www.linkedin.com/in/kennywibowo">
                         <i class="fa fa-linkedin-square fa-5x wow fadeInUp" aria-hidden="true"></i>
                     </a>
                 </div>
 
-                <div class="ico col-xs-4 col-md-4">
+                <div class="ico-box col-xs-4 col-md-4">
                     <a class="github-invertocat-ico" href="https://github.com/KennyWibowo">
                         <i class="fa fa-github fa-5x wow fadeInUp" aria-hidden="true"></i>
                     </a>
                 </div>
 
-                <div class="ico col-xs-4 col-md-4">
+                <div class="ico-box col-xs-4 col-md-4">
                     <a class="facebook-ico" href="https://www.facebook.com/kiwi.wibowo">
                         <i class="fa fa-facebook-square fa-5x wow fadeInUp" aria-hidden="true"></i>
                     </a>
@@ -91,26 +132,26 @@
 
                 <!-- ROW 2 -->
 
-                <div class="ico col-xs-4 col-md-4">
+                <div class="ico-box col-xs-4 col-md-4">
                     <a class="spotify-ico" href="https://open.spotify.com/user/1262874144">
                         <i class="fa fa-spotify fa-5x wow fadeInUp" aria-hidden="true"></i>
                     </a>
                 </div>
 
-                <div class="ico col-xs-4 col-md-4">
+                <div class="ico-box col-xs-4 col-md-4">
                     <a class="" href="https://www.npmjs.com/~kennywibowo">
                         <img src="/res/icons/npm.png" class="npm-ico wow fadeInUp" aria-hidden="true">
                     </a>
                 </div>
 
-                <div class="ico col-xs-4 col-md-4">
+                <div class="ico-box col-xs-4 col-md-4">
                     <a class="ico" href="mailto:kewibowo@ucsd.edu">
                         <i class="fa fa-envelope fa-5x wow fadeInUp" aria-hidden="true"></i>
                     </a>
                 </div>
 
                 <div class="footer-content wow fadeInUp">
-                    <p>Website put together by Kenny Wibowo.</p>
+                    <p>Website put together with love by Kenny Wibowo.</p>
                     <p>Nitty gritty source code located <a href="https://github.com/KennyWibowo/KennyPortfolio/tree/master">here.</a></p>
                 </div>
 

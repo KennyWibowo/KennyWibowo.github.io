@@ -1,5 +1,10 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 
+/* THEME COLORS */
+/* Primary: #96cafd */
+/* Secondary: #64b1fc */
+/* Tertiary: #4ba4fc */
+
 body {
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     margin: 0 auto;
@@ -7,9 +12,12 @@ body {
 }
 
 hr {
-    max-width: 50px
+    max-width: 50px;
+    border-color: #96cafd;
+    border-width: 3px;
 }
 
+h1,
 h2 {
     margin-top: 1em;
     padding-top: 1em;
@@ -104,9 +112,13 @@ footer {
     box-shadow: 0 6px 12px rgba(0,0,0,.4);
 }
 
-.ico {
+.ico-box {
     padding-top: 2em;
     padding-bottom: 2em;
+}
+
+.ico {
+    color: #4ba4fc;
 }
 
 .opaquebox {
