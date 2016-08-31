@@ -1,7 +1,6 @@
 /* Brand-specific styling - thanks to https://brandcolors.net/ */
 
 .ico {
-    max-width: 20em;
     color: #4ba4fc;
 }
 
@@ -45,4 +44,18 @@
     -moz-box-shadow: 0 6px 12px rgba(0,0,0,.4);
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.4);
     box-shadow: 0 6px 12px rgba(0,0,0,.4);
+}
+
+.logo {
+    max-width: 20em;
+    padding-bottom: 1em;
+    max-height: 10em;
+}
+
+.hpe-link {
+    color: rgb(0, 177, 136);
+}
+
+.hpe-link:hover {
+    color: black;
 }
