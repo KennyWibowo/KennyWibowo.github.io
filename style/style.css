@@ -26,6 +26,8 @@ a {
 }
 
 header {
+    height:100%
+    width:auto;
     background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
