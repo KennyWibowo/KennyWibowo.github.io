@@ -15,7 +15,7 @@ body {
 
 hr {
     max-width: 50px;
-    border-color: #96cafd;
+    border-color: #96cafd !important;
     border-width: 3px;
 }
 
@@ -62,16 +62,14 @@ header img {
     width: 20em;
 }
 
-header h1 {
-    margin-top: 0em;
-    padding-top: 0em;
-    text-shadow: 1px 1px #000000;
-    color: #96cafd;
-    font-size: 4em;
+header p {
+    color: #034b91;
 }
 
-header p {
-    color: #02417e;
+h1.header-title {
+    margin-top: 0em;
+    padding-top: 0em;
+    font-size: 4em;
 }
 
 .header-pic {
