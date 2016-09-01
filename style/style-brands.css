@@ -31,6 +31,10 @@
     color: rgb(169, 29, 56);
 }
 
+.slac-link:hover {
+    color: black;
+}
+
 
 /* Language Section -  manual padding to center */
 
