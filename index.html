@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
         <title>Kenny Wibowo - Portfolio</title>
 
@@ -35,7 +35,7 @@
         <link rel="preload" href="style/font-mfizz/font-mfizz.css" as="style" onload="this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="style/font-mfizz/font-mfizz.min.css"></noscript>
 
-        <!-- Animate.css and WOW.js -->
+        <!-- Animate.css and WOW.js - TODO async WOW.js -->
         <link rel="preload" href="style/animate.min.css" as="style" onload="this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="style/animate.min.css"></noscript>
         <script src="js/wow.min.js"></script>
@@ -46,7 +46,7 @@
         <link rel="preload" href="style/style-brands.css" as="style" onload="this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="style/style-brands.css"></noscript>
         
-        <!-- PlaceFlow.js -->
+        <!-- PlaceFlow.js - TODO async WOW.js -->
         <script src="https://cdn.rawgit.com/KennyWibowo/PlaceFlow/0.0.1/dist/placeflow.js"></script>
     </head>
 
@@ -297,16 +297,6 @@
                 </div>
             </div>
 
-            <div class="container-fluid">
-                <h1 class="text-center">
-                    The rest of this site is still under construction.
-                </h1>
-
-                <h3 class="text-center">
-                    For now, check out <a href="https://kennywibowo.github.io/ConnectFall/">my twist on Connect Four.</a>
-                </h3>
-            </div>
-
         </main>
 
         <footer>
@@ -360,7 +350,7 @@
                 </div>
 
                 <div class="footer-content col-xs-12 col-md-12 wow fadeInUp">
-                    <p>Website put together with love by Kenny Wibowo.</p>
+                    <p>Website put together with <i class="fa fa-heart heart" aria-hidden="true"></i> by Kenny Wibowo.</p>
                     <p>Nitty gritty source code located <a href="https://github.com/KennyWibowo/KennyPortfolio/tree/master">here.</a></p>
                 </div>
 
@@ -370,8 +360,10 @@
     <!-- deferred scripts, execute at the end -->
 
     <script>
-        new WOW().init();
-        new PlaceFlow().init();
+        /*window.onload = function() {*/
+            new WOW().init();
+            new PlaceFlow().init();
+        /*}*/
     </script>
     </body>
 </html>
