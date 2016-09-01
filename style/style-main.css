@@ -90,6 +90,10 @@ h1.header-title {
     background-color: rgba(246,255,255,.9);
 }
 
+.education-section {
+    max-width: 50em;
+}
+
 .footer-title,
 .footer-content {
     margin-top: 1em;
