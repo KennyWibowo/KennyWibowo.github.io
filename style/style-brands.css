@@ -35,8 +35,18 @@
     color: black;
 }
 
+/* Framework section */
+
+.logo-framework {
+    max-height: 7em;
+}
+
 
 /* Language Section -  manual padding to center */
+
+.ico-lang {
+    height: 15em;
+}
 
 .java-ico {
     margin-left: 0.45em;
@@ -65,6 +75,10 @@
 
 /* Contact/Interest Section */
 
+.ico-contact {
+    font-size: 7em;
+}
+
 .github-invertocat-ico {
     color: #999999;
 }
@@ -90,8 +104,8 @@
 }
 
 .npm-ico {
-    width: 5em;
-    height: 5em;
+    width: 6em;
+    height: 6em;
 }
 
 .npm-ico:hover {
