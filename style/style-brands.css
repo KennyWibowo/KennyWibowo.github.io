@@ -15,13 +15,17 @@
 
 .logo {
     margin: 0 auto;
-    max-width: 20em;
+    width: 20em;
     padding-bottom: 1em;
-    max-height: 10em;
 }
 
 .obrary-logo {
     height: 10em;
+}
+
+.dv-logo {
+    height: 10em;
+    width: auto;
 }
 
 .hpe-link {
@@ -40,17 +44,11 @@
     color: black;
 }
 
-/* Framework section */
-
-.logo-framework {
-    max-height: 7em;
-}
-
 
 /* Language Section -  manual padding to center */
 
 .ico-lang {
-    height: 17em;
+    height: 21em;
 }
 
 .java-ico {
@@ -75,6 +73,20 @@
 
 .rpi-ico {
     margin-left: 0.25em;
+}
+
+/* Framework Section */
+
+.logo-framework {
+    max-height: 7em;
+    width: auto;
+}
+
+/* Education Section */
+
+.logo-education {
+    max-height: 15em;
+    width: auto;
 }
 
 
