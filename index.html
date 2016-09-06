@@ -22,6 +22,9 @@
         <!-- jQuery -->
         <script async src="https://code.jquery.com/jquery-3.1.0.min.js" crossorigin="anonymous"></script>
 
+        <!-- Angular -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
         <!-- Bootstrap stuff -->
         <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></noscript>
@@ -46,8 +49,11 @@
         <link rel="preload" href="style/style-brands.css" as="style" onload="this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="style/style-brands.css"></noscript>
         
-        <!-- PlaceFlow.js - TODO async WOW.js -->
+        <!-- PlaceFlow.js - TODO async -->
         <script src="https://cdn.rawgit.com/KennyWibowo/PlaceFlow/0.0.1/dist/placeflow.js"></script>
+
+        <!-- ConnectFall - For demo purposes -->
+        <script src="https://cdn.rawgit.com/KennyWibowo/ConnectFall/0.0.3/release/ConnectFall.0.0.3.js"></script>
     </head>
 
     <body>
@@ -258,6 +264,35 @@
 
                     <!-- </div> -->
 
+                </div>
+            </div>
+
+            <div class="container-fluid text-center">
+                <div class="container project-section">
+                    <h1 class="col-xs-12 col-md-12">Some Projects I've Made</h1>
+                    <div class="col-xs-12 col-md-12">
+                        <hr>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="ico-box col-xs-12 col-md-6 text-center wow bounceIn jumbotron jumbotron-connectfall shadow" ng-app="connectFall" data-wow-delay="0.3s">
+                            <h2>Connect Fall</h2>
+                            <connect-fall></connect-fall>
+                        </div>
+
+                        <div class="ico-box col-xs-12 col-md-6 wow bounceIn" data-wow-delay="0.3s">
+                            <a href="http://www.dvhigh.net/">
+                                <img class="edu-logo logo" src="res/icons/dvhs.png" alt="Obrary"></img>
+                            </a>
+                            <h3>Dougherty Valley High School</h3>
+                            <h4>Class of 2014</h4>
+                            <h4><i>San Ramon, California</i></h4>
+                            <h4>8/2011 - 6/2014</h4>
+                            <p></p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 

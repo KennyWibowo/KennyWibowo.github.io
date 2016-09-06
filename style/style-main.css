@@ -90,6 +90,11 @@ h1.header-title {
     background-color: rgba(246,255,255,.9);
 }
 
+.jumbotron-connectfall {
+    background-color: #96cafd;
+    color: white;
+}
+
 .education-section {
     max-width: 50em;
 }
