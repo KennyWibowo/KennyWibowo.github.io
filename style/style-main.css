@@ -94,6 +94,14 @@ h1.header-title {
     background-color: #bcddfe;
 }
 
+.placeflow-title {
+    font-size: 63px;
+}
+
+.placeflow-img {
+    max-width: 30em;
+}
+
 .education-section {
     max-width: 50em;
 }
