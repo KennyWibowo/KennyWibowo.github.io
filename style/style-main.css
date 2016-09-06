@@ -42,7 +42,7 @@ a {
 }
 
 header {
-    height: 100vh;
+    min-height: 100vh;
     width:auto;
     background-position: center top;
     background-repeat: no-repeat;
@@ -50,16 +50,17 @@ header {
     background-size: cover;
     line-height: 1.2;
     max-width: none;
-    padding: 10vh 2em 10vh 2em;
+    padding: 6vh 2em 6vh 2em;
     text-align: center;
 }
 
 
 header img {
     display: inline-block;
-    height: 20em;
+    max-height: 20em;
     vertical-align: top;
-    width: 20em;
+    max-width: 20em;
+    margin: 0 auto;
 }
 
 header p {
@@ -69,7 +70,6 @@ header p {
 h1.header-title {
     margin-top: 0em;
     padding-top: 0em;
-    font-size: 4em;
 }
 
 .header-pic {
