@@ -2,8 +2,8 @@ var dogtext = document.getElementById("dogtext");
 var header = document.getElementById("header");
 
 var image = new Image();
-var doggified = false;
 
+var doggified = false;
 var dogswitch = true;
 
 image.onload = function() {
