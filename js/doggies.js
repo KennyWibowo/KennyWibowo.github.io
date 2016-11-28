@@ -10,7 +10,7 @@ image.onload = function() {
 	var prev_bkg = header.style.backgroundImage;
 	dogtext.onclick = function() {
 
-		// Switch between default background and 
+		// Switch between default background and original background
 		if(!doggified) {
 			prev_bkg = header.style.backgroundImage;
 			header.style.backgroundImage = 'url("https://wibow.io/res/doggies.png")';
