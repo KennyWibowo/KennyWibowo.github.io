@@ -1,5 +1,5 @@
 (function($) {
-
+    // Logic to handle flipping between dog and non-dog backgrounds
     var dogflip = function(src, onDoggify, onNonDoggify) {
         var image = new Image();
 
@@ -55,30 +55,63 @@
         );
     }
 
-    // TODO: animate using animate.css and jQuery
+    // Animated version of easter egg that bounces my face in and out
     var yesJQ = function($) {
         if(!$) {
             return;
+        } else {
+            $.fn.visible = function() {
+                return this.css('visibility', 'visible');
+            };
+
+            $.fn.invisible = function() {
+                return this.css('visibility', 'hidden');
+            };
+
+            var animate = function(elem, animationName, next) {
+                var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                elem.addClass('animated ' + animationName).one(animationEnd, function() {
+                    elem.removeClass('animated ' + animationName);
+                    
+                    if(next) {
+                        next();
+                    }
+                });
+            }
         }
 
         var dogtext = $('#dogtext');
         var header = $('#header');
         var me = $('#me');
+        
+        var prev_bkg = header.css("background-image");
+        var dogswitch = true;
 
-        var animate = function(elem, animationName, next) {
-            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-            elem.addClass('animated ' + animationName).one(animationEnd, function() {
-                elem.removeClass('animated ' + animationName);
+        dogflip("https://wibow.io/res/doggies.png",
+            function onDoggify() {
+                prev_bkg = header.css("background-image");
+                header.css("background-image", 'url("https://wibow.io/res/doggies.png")');
+
+                animate(me, "bounceOut", function() {
+                    me.invisible();
+                })
                 
-                if(next) {
-                    next();
+                // Switch between Bella and Chewie
+                if(dogswitch) {
+                    header.css("background-position", "left top");
+                } else {
+                    header.css("background-position", "right top");
                 }
-            });
-        }
 
-        //animate(, '')
+                dogswitch = !dogswitch;
+            }, function onNonDoggify() {
+                me.visible();
+                animate(me, "bounceIn");
 
-
+                header.css("background-image", prev_bkg);
+                header.css("background-position", "center top");
+            }
+        );
     }
 
     // Cache the previous onload and run any passed in one.
@@ -100,15 +133,13 @@
         }
     }
 
-
+    // Execute based off of whether we have jQuery.
     addOnloadEvent(function() {
-        // Execute based off of whether we have jQuery.
-        /*if (window.jQuery) {  
+        if (window.jQuery) {  
             yesJQ(window.jQuery);
         } else {
             noJQ();
-        }*/
-        noJQ();
+        }
     });
 
 })();
