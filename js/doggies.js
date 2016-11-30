@@ -106,7 +106,9 @@
                 dogswitch = !dogswitch;
             }, function onNonDoggify() {
                 me.visible();
-                animate(me, "bounceIn");
+                animate(me, "bounceIn", function() {
+                    me.visible();
+                });
 
                 header.css("background-image", prev_bkg);
                 header.css("background-position", "center top");
