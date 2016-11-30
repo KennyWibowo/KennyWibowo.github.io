@@ -1,39 +1,18 @@
 (function($) {
 
-    // non-jQuery vanilla functionality of easter egg.
-    var noJQ = function() {
-        var dogtext = document.getElementById("dogtext");
-        var header = document.getElementById("header");
-        var me = document.getElementById("me");
-
+    var dogflip = function(src, onDoggify, onNonDoggify) {
         var image = new Image();
 
         var doggified = false;
-        var dogswitch = true;
 
         image.onload = function() {
-            var prev_bkg = header.style.backgroundImage;
             dogtext.onclick = function() {
 
                 // Switch between default background and original background
                 if(!doggified) {
-                    prev_bkg = header.style.backgroundImage;
-                    header.style.backgroundImage = 'url("https://wibow.io/res/doggies.png")';
-
-                    me.style.visibility = "hidden";
-                    
-                    // Switch between Bella and Chewie
-                    if(dogswitch) {
-                        header.style.backgroundPosition = "left top";
-                    } else {
-                        header.style.backgroundPosition = "right top";
-                    }
-
-                    dogswitch = !dogswitch;
+                    onDoggify();
                 } else {
-                    me.style.visibility = "";
-                    header.style.backgroundImage = prev_bkg;
-                    header.style.backgroundPosition = "center top";
+                    onNonDoggify();
                 }
 
                 doggified = !doggified;
@@ -41,7 +20,39 @@
         }
 
         // Prefetch the image
-        image.src = "https://wibow.io/res/doggies.png";
+        image.src = src;
+    }
+
+    // non-jQuery vanilla functionality of easter egg.
+    var noJQ = function() {
+        var dogtext = document.getElementById("dogtext");
+        var header = document.getElementById("header");
+        var me = document.getElementById("me");
+        
+        var prev_bkg = header.style.backgroundImage;
+        var dogswitch = true;
+
+        dogflip("https://wibow.io/res/doggies.png",
+            function onDoggify() {
+                prev_bkg = header.style.backgroundImage;
+                header.style.backgroundImage = 'url("https://wibow.io/res/doggies.png")';
+
+                me.style.visibility = "hidden";
+                
+                // Switch between Bella and Chewie
+                if(dogswitch) {
+                    header.style.backgroundPosition = "left top";
+                } else {
+                    header.style.backgroundPosition = "right top";
+                }
+
+                dogswitch = !dogswitch;
+            }, function onNonDoggify() {
+                me.style.visibility = "";
+                header.style.backgroundImage = prev_bkg;
+                header.style.backgroundPosition = "center top";
+            }
+        );
     }
 
     // TODO: animate using animate.css and jQuery
@@ -52,6 +63,22 @@
 
         var dogtext = $('#dogtext');
         var header = $('#header');
+        var me = $('#me');
+
+        var animate = function(elem, animationName, next) {
+            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            elem.addClass('animated ' + animationName).one(animationEnd, function() {
+                elem.removeClass('animated ' + animationName);
+                
+                if(next) {
+                    next();
+                }
+            });
+        }
+
+        //animate(, '')
+
+
     }
 
     // Cache the previous onload and run any passed in one.
@@ -81,7 +108,6 @@
         } else {
             noJQ();
         }*/
-
         noJQ();
     });
 
