@@ -30,10 +30,10 @@
         var prev_bkg = header.style.backgroundImage;
         var dogswitch = true;
 
-        dogflip("https://wibow.io/res/doggies.png", dogtext,
+        dogflip("https://wibow.io/res/doggies.jpg", dogtext,
             function onDoggify() {
                 prev_bkg = header.style.backgroundImage;
-                header.style.backgroundImage = 'url("https://wibow.io/res/doggies.png")';
+                header.style.backgroundImage = 'url("https://wibow.io/res/doggies.jpg")';
 
                 me.style.visibility = "hidden";
                 
@@ -88,7 +88,7 @@
         dogflip("https://wibow.io/res/doggies.png", dogtext,
             function onDoggify() {
                 prev_bkg = header.css("background-image");
-                header.css("background-image", 'url("https://wibow.io/res/doggies.png")');
+                header.css("background-image", 'url("https://wibow.io/res/doggies.jpg")');
 
                 animate(me, "bounceOut", function() {
                     me.invisible();
