@@ -4,19 +4,17 @@
         var image = new Image();
 
         var doggified = false;
+        
+        elem.onclick = function() {
 
-        image.onload = function() {
-            elem.onclick = function() {
-
-                // Switch between default background and original background
-                if(!doggified) {
-                    onDoggify();
-                } else {
-                    onNonDoggify();
-                }
-
-                doggified = !doggified;
+            // Switch between default background and original background
+            if(!doggified) {
+                onDoggify();
+            } else {
+                onNonDoggify();
             }
+
+            doggified = !doggified;
         }
 
         // Prefetch the image
