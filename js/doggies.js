@@ -1,12 +1,12 @@
 (function($) {
     // Logic to handle flipping between dog and non-dog backgrounds
-    var dogflip = function(src, onDoggify, onNonDoggify) {
+    var dogflip = function(src, elem, onDoggify, onNonDoggify) {
         var image = new Image();
 
         var doggified = false;
 
         image.onload = function() {
-            dogtext.onclick = function() {
+            elem.onclick = function() {
 
                 // Switch between default background and original background
                 if(!doggified) {
@@ -32,7 +32,7 @@
         var prev_bkg = header.style.backgroundImage;
         var dogswitch = true;
 
-        dogflip("https://wibow.io/res/doggies.png",
+        dogflip("https://wibow.io/res/doggies.png", dogtext,
             function onDoggify() {
                 prev_bkg = header.style.backgroundImage;
                 header.style.backgroundImage = 'url("https://wibow.io/res/doggies.png")';
@@ -80,14 +80,14 @@
             }
         }
 
-        var dogtext = $('#dogtext');
+        var dogtext = document.getElementById("dogtext");
         var header = $('#header');
         var me = $('#me');
         
         var prev_bkg = header.css("background-image");
         var dogswitch = true;
 
-        dogflip("https://wibow.io/res/doggies.png",
+        dogflip("https://wibow.io/res/doggies.png", dogtext,
             function onDoggify() {
                 prev_bkg = header.css("background-image");
                 header.css("background-image", 'url("https://wibow.io/res/doggies.png")');
