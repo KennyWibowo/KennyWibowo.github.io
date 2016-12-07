@@ -4,18 +4,34 @@
         var image = new Image();
 
         var doggified = false;
-        
-        elem.onclick = function() {
 
-            // Switch between default background and original background
-            if(!doggified) {
-                onDoggify();
-            } else {
-                onNonDoggify();
-            }
+        if(window.jQuery) {
+            var $ = window.jQuery;
 
-            doggified = !doggified;
+            $(elem).click(function() {
+                // Switch between default background and original background
+                if(!doggified) {
+                    onDoggify();
+                } else {
+                    onNonDoggify();
+                }
+
+                doggified = !doggified;
+            })
+        } else {
+            elem.onclick = function() {
+
+                // Switch between default background and original background
+                if(!doggified) {
+                    onDoggify();
+                } else {
+                    onNonDoggify();
+                }
+
+                doggified = !doggified;
+            } 
         }
+        
 
         // Prefetch the image
         image.src = src;
