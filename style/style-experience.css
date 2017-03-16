@@ -1,0 +1,32 @@
+@media(min-width: 768px) {
+    .scroll-panel {
+        position: absolute;
+        height: 100vh;
+        width: 50vw;
+        left: 0;
+        top: 120vh;
+        overflow: hidden;
+    }
+
+    .scroll-images {
+        height: 100vh;
+    }
+
+    .experience-item-container {
+        position: relative;
+        height: 100vh;
+    }
+
+    .experience-item {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        animate: none;
+    }
+
+}
+@media(max-width: 768px) {
+    .scroll-panel {
+        display: none;
+    }
+}

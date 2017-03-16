@@ -48,6 +48,8 @@
         <noscript><link rel="stylesheet" href="style/style-main.css"></noscript>
         <link rel="preload" href="style/style-brands.css" as="style" onload="this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="style/style-brands.css"></noscript>
+        <link rel="preload" href="style/style-experience.css" as="style" onload="this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="style/style-brands.css"></noscript>
         
         <!-- PlaceFlow.js - TODO async -->
         <script src="https://cdn.rawgit.com/KennyWibowo/PlaceFlow/0.0.1/dist/placeflow.js"></script>
@@ -79,88 +81,107 @@
         </header>
 
         <main>
-            <div class="container-fluid experience-section text-center">
-                <div class="container">
-                    <h1 class="col-xs-12 col-md-12">Summary of Experience</h1>
-                    <div class="col-xs-12 col-md-12">
-                        <hr>
+            <div id="experience-section" class="container-fluid experience-section text-center">
+
+                <div class="">
+                    <div class="experience-title">
+                        <h1 class="col-xs-12 col-md-12">Summary of Experience</h1>
+                        <div class="col-xs-12 col-md-12">
+                            <hr>
+                        </div>
                     </div>
-
                     <div class="row">
-
-                        <div class="ico-box col-xs-12 col-md-12 text-center wow bounceIn" data-wow-delay="0.1s">
-                            <a href="https://www.amazon.com/">
-                                <img class="logo img-responsive" src="res/icons/amazon.png" alt="Amazon"></img>
-                            </a>
-                            <h3>Software Development Engineer Intern</h3>
-                            <h4>Starting 6/2017</h4>
-                            <p></p>
+                        <div id="scroll-panel" class="scroll-panel">
+                            <img class="scroll-images" src="res/experience_backgrounds/amazon.jpg">
                         </div>
 
-                    </div>
-
-                    <div class="row">
-
-                        <div class="ico-box col-xs-12 col-md-6 text-center wow bounceIn" data-wow-delay="0.1s">
-                            <a href="https://www.hpe.com/">
-                                <img class="logo img-responsive" src="res/icons/hpe.png" alt="Hewlett Packard Enterprise"></img>
-                            </a>
-                            <h3>Software Development Engineer Intern</h3>
-                            <a class="hpe-link" href="http://www8.hp.com/us/en/software-solutions/static-code-analysis-sast/">
-                                <h4>Fortify Security - Static Code Analyzer</h4>
-                            </a>
-                            <h4><i>Sunnyvale, California</i></h4>
-                            <h4>6/2016 - 8/2016</h4>
-                            <p></p>
+                        <div class="col-md-6">
                         </div>
 
-                        <div class="ico-box col-xs-12 col-md-6 wow bounceIn" data-wow-delay="0.1s">
-                            <a href="http://obrary.com/">
-                                <img class="logo obrary-logo img-responsive" src="res/icons/obrary.svg" alt="Obrary"></img>
-                            </a>
-                            <h3>Software Engineering Intern</h3>
-                            <h4><i>San Diego, California</i></h4>
-                            <h4>6/2015 - 1/2016</h4>
-                            <p></p>
+                        <div id="experience-items" class="col-md-6">
+                            <div class="experience-item-container row">
+
+                                <div class="experience-item ico-box col-xs-12 col-md-12 text-center" data-wow-delay="0.1s">
+                                    <a href="https://www.amazon.com/">
+                                        <img class="logo img-responsive" src="res/icons/amazon.png" alt="Amazon"></img>
+                                    </a>
+                                    <h3>Software Development Engineer Intern</h3>
+                                    <h4>Starting 6/2017</h4>
+                                    <p></p>
+                                </div>
+
+                            </div>
+
+                            <div class="experience-item-container row">
+
+                                <div class="experience-item ico-box col-xs-12 col-md-12 text-center" data-wow-delay="0.1s">
+                                    <a href="https://www.hpe.com/">
+                                        <img class="logo img-responsive" src="res/icons/hpe.png" alt="Hewlett Packard Enterprise"></img>
+                                    </a>
+                                    <h3>Software Development Engineer Intern</h3>
+                                    <a class="hpe-link" href="http://www8.hp.com/us/en/software-solutions/static-code-analysis-sast/">
+                                        <h4>Fortify Security - Static Code Analyzer</h4>
+                                    </a>
+                                    <h4><i>Sunnyvale, California</i></h4>
+                                    <h4>6/2016 - 8/2016</h4>
+                                    <p></p>
+                                </div>
+
+
+                            </div>
+
+                            <div class="experience-item-container row">
+
+                                <div class="experience-item ico-box col-xs-12 col-md-12" data-wow-delay="0.1s">
+                                    <a href="http://obrary.com/">
+                                        <img class="logo obrary-logo img-responsive" src="res/icons/obrary.svg" alt="Obrary"></img>
+                                    </a>
+                                    <h3>Software Engineering Intern</h3>
+                                    <h4><i>San Diego, California</i></h4>
+                                    <h4>6/2015 - 1/2016</h4>
+                                    <p></p>
+                                </div>
+
+                            </div>
+
+                            <div class="experience-item-container row">
+
+                                <div class="experience-item ico-box col-xs-12 col-md-12" data-wow-delay="0.1s">
+                                    <a href="https://www6.slac.stanford.edu/">
+                                        <img class="logo img-responsive" src="res/icons/slac.png" alt="Stanford Linear Accelerator Center"></img>
+                                    </a>
+                                    <h3>Software Engineering Intern</h3>
+                                    <a class="slac-link" href="https://portal.slac.stanford.edu/sites/controls_public/Pages/Default.aspx">
+                                        <h4>Instrumentation and Controls Division</h4>
+                                    </a>
+                                    <h4><i>Menlo Park, California</i></h4>
+                                    <h4>6/2013 - 8/2013</h4>
+                                    <p></p>
+                                </div>
+
+                            </div>
+
+                            <div class="experience-item-container row">
+
+                                <div class="experience-item ico-box col-xs-12 col-md-12" data-wow-delay="0.1s">
+                                    <a href="http://www.dvhscompgov.com/">
+                                        <img class="logo dv-logo img-responsive" src="res/icons/dv.png" alt="Dougherty Valley"></img>
+                                    </a>
+                                    <h3 class="nopadding">Second Technologies</h3>
+                                    <h4>Web Creative Team Member</h4>
+                                    <h4><i>San Ramon, California</i></h4>
+                                    <h4>6/2014 - 9/2014</h4>
+                                    <p></p>
+                                </div>
+                                
+                            </div>
                         </div>
-
-                    </div>
-
-                    <!-- Clearfix for md -->
-                    <div class="clearfix visible-md-block"></div>
-
-                    <div class="row">
-
-                        <div class="ico-box col-xs-12 col-md-6 wow bounceIn" data-wow-delay="0.1s">
-                            <a href="https://www6.slac.stanford.edu/">
-                                <img class="logo img-responsive" src="res/icons/slac.png" alt="Stanford Linear Accelerator Center"></img>
-                            </a>
-                            <h3>Software Engineering Intern</h3>
-                            <a class="slac-link" href="https://portal.slac.stanford.edu/sites/controls_public/Pages/Default.aspx">
-                                <h4>Instrumentation and Controls Division</h4>
-                            </a>
-                            <h4><i>Menlo Park, California</i></h4>
-                            <h4>6/2013 - 8/2013</h4>
-                            <p></p>
-                        </div>
-
-                        <div class="ico-box col-xs-12 col-md-6 wow bounceIn" data-wow-delay="0.1s">
-                            <a href="http://www.dvhscompgov.com/">
-                                <img class="logo dv-logo img-responsive" src="res/icons/dv.png" alt="Dougherty Valley"></img>
-                            </a>
-                            <h3 class="nopadding">Second Technologies</h3>
-                            <h4>Web Creative Team Member</h4>
-                            <h4><i>San Ramon, California</i></h4>
-                            <h4>6/2014 - 9/2014</h4>
-                            <p></p>
-                        </div>
-
                     </div>
 
                 </div>
             </div>
 
-            <div class="container-fluid language-section text-center">
+            <div id="language-section" class="container-fluid language-section text-center">
                 <div class="container">
                     <h1 class="col-xs-12 col-md-12">Programming Languages</h1>
                     <div class="col-xs-12 col-md-12">
@@ -471,6 +492,44 @@
         </footer>
     
     <!-- deferred scripts, execute at the end -->
+    <script TYPE="text/javascript">
+        (function() {
+            $(document).ready(function() {
+                /* http://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling */
+
+
+                function isScrolledIntoView(elem) {
+                }
+
+                var experience_ctx = document.getElementById("experience-items");
+                var language_ctx = document.getElementById("language-sectiong");
+                var image_panel = document.getElementById("scroll-panel");
+
+                var scroll_images = $(".scroll-images");
+                var experience_items = $(".experience-item");
+                
+                function update() {
+                    var docViewTop = $(window).scrollTop();
+                    var docViewBottom = docViewTop + $(window).height();
+
+                    var elemTop = $(experience_ctx).offset().top;
+                    var elemBottom = elemTop + $(experience_ctx).height();
+
+                    var visible = !(((elemBottom <= docViewBottom) || (elemTop >= docViewTop)));
+
+                    if(visible) {
+                        $(image_panel).css("top", docViewTop + "px");
+                    }
+                };
+
+                update();
+
+                window.addEventListener("scroll", update);
+                
+            })
+        })();
+
+    </script>
 
     <!-- Angular -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
