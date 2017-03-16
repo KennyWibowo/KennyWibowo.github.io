@@ -28,6 +28,14 @@
     width: auto;
 }
 
+.amazon-link {
+    color: #FF9900;
+}
+
+.amazon-link:hover {
+    color: black;
+}
+
 .hpe-link {
     color: rgb(0, 177, 136);
 }

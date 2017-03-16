@@ -1,4 +1,5 @@
-@media(min-width: 768px) {
+/* Show the scroll panel when screen is large enough*/
+@media(min-width: 992px) {
     .scroll-panel {
         position: absolute;
         height: 100vh;
@@ -8,8 +9,11 @@
         overflow: hidden;
     }
 
-    .scroll-images {
+    .scroll-image {
+        position: absolute;
+        left: 0;
         height: 100vh;
+        opacity: 0;
     }
 
     .experience-item-container {
@@ -25,8 +29,14 @@
     }
 
 }
-@media(max-width: 768px) {
+
+/* Hide everything when the screen doesn't fit it*/
+@media(max-width: 992px) {
     .scroll-panel {
+        display: none;
+    }
+
+    .scroll-image {
         display: none;
     }
 }
