@@ -18,13 +18,13 @@
 
     .experience-item-container {
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 100vh;
     }
 
     .experience-item {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
         animate: none;
     }
 
