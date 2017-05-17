@@ -86,7 +86,7 @@
                 <div class="">
                     <div class="experience-title">
                         <h1 class="col-xs-12 col-md-12">Summary of Experience</h1>
-                        <div class="col-xs-12 col-md-12">
+                        <div id="scroll-panel-anchor" class="col-xs-12 col-md-12">
                             <hr>
                         </div>
                     </div>
@@ -506,17 +506,13 @@
             $(document).ready(function() {
                 /* http://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling */
 
-
-                function isScrolledIntoView(elem) {
-                }
-
                 var experience_ctx = document.getElementById("experience-items");
                 var language_ctx = document.getElementById("language-sectiong");
                 var image_panel = document.getElementById("scroll-panel");
 
                 var scroll_images = $(".scroll-image");
                 var experience_items = $(".experience-item-container");
-                
+
                 function update() {
                     var docViewTop = $(window).scrollTop();
                     var docViewBottom = docViewTop + $(window).height();
@@ -528,6 +524,10 @@
 
                     if(visible) {
                         $(image_panel).css("top", docViewTop + "px");
+                    } else if(experienceBottom <= docViewBottom) {
+                        $(image_panel).css("top", (experienceTop + $(experience_ctx).height() - $(image_panel).height()) + "px");
+                    } else if(experienceTop >= docViewTop) {
+                        $(image_panel).css("top", $(experience_ctx).offset().top + "px");
                     }
 
                     for(var i = 0; i < experience_items.length; i++) {
@@ -551,7 +551,7 @@
                             $(scroll_images[i]).css("opacity", "0");
                         }
                     }
-                };
+                }
 
                 update();
 
