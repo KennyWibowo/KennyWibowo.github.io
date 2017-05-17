@@ -522,12 +522,18 @@
 
                     var visible = !(((experienceBottom <= docViewBottom) || (experienceTop >= docViewTop)));
 
+                    var bottomPos = (experienceTop + $(experience_ctx).height() - $(image_panel).height());
+                    var topPos = $(experience_ctx).offset().top;
+
                     if(visible) {
-                        $(image_panel).css("top", docViewTop + "px");
+                        $(image_panel).css("top", "0px");
+                        $(image_panel).css("position", "fixed")
                     } else if(experienceBottom <= docViewBottom) {
-                        $(image_panel).css("top", (experienceTop + $(experience_ctx).height() - $(image_panel).height()) + "px");
+                        $(image_panel).css("top", bottomPos + "px");
+                        $(image_panel).css("position", "absolute")
                     } else if(experienceTop >= docViewTop) {
-                        $(image_panel).css("top", $(experience_ctx).offset().top + "px");
+                        $(image_panel).css("top", topPos + "px");
+                        $(image_panel).css("position", "absolute")
                     }
 
                     for(var i = 0; i < experience_items.length; i++) {
@@ -541,7 +547,7 @@
                             if(itemTop < docViewTop) {
                                 visiblePct = (itemBottom - docViewTop)/itemHeight;
 
-                                if( visiblePct > 1 ) {
+                                if( visiblePct > 1 || visiblePct < 0) {
                                     visiblePct = 0;
                                 }
                             }
