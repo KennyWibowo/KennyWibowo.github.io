@@ -538,6 +538,7 @@
 
                     for(var i = 0; i < experience_items.length; i++) {
                         var itemHeight = $(experience_items[i]).height();
+                        var itemHeightHalf = itemHeight/2;
                         var itemTop = $(experience_items[i]).offset().top;
                         var itemBottom = itemTop + itemHeight;
 
@@ -547,7 +548,9 @@
                             if(itemTop < docViewTop) {
                                 visiblePct = (itemBottom - docViewTop)/itemHeight;
 
-                                if( visiblePct > 1 || visiblePct < 0) {
+                                visiblePct *= 2;
+
+                                if( visiblePct < 0) {
                                     visiblePct = 0;
                                 }
                             }
