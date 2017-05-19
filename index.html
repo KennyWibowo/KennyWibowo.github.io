@@ -84,7 +84,7 @@
             <div id="experience-section" class="container-fluid experience-section text-center">
 
                 <div class="">
-                    <div class="experience-title">
+                    <div id="experience-title" class="experience-title">
                         <h1 class="col-xs-12 col-md-12">Summary of Experience</h1>
                         <div id="scroll-panel-anchor" class="col-xs-12 col-md-12">
                             <hr>
@@ -103,9 +103,9 @@
                         </div>
 
                         <div id="experience-items" class="col-md-6 col-xs-12">
-                            <div class="experience-item-container row">
+                            <div class="experience-item-container row" style="height: 125vh;">
 
-                                <div class="experience-item ico-box col-xs-12 col-md-12 text-center" data-wow-delay="0.1s">
+                                <div class="experience-item ico-box col-xs-12 col-md-12 text-center"data-wow-delay="0.1s">
                                     <a href="https://www.amazon.com/">
                                         <img class="logo img-responsive" src="res/icons/amazon.png" alt="Amazon"></img>
                                     </a>
@@ -507,8 +507,8 @@
                 /* http://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling */
 
                 var experience_ctx = document.getElementById("experience-items");
-                var language_ctx = document.getElementById("language-sectiong");
                 var image_panel = document.getElementById("scroll-panel");
+                var experience_title_ctx = document.getElementById("experience-title");
 
                 var scroll_images = $(".scroll-image");
                 var experience_items = $(".experience-item-container");
@@ -548,11 +548,16 @@
                             if(itemTop < docViewTop) {
                                 visiblePct = (itemBottom - docViewTop)/itemHeight;
 
-                                visiblePct *= 2;
-
                                 if( visiblePct < 0 ) {
                                     visiblePct = 0;
                                 }
+                            }
+
+                            visiblePct *= 2;
+
+                            // start hiding title for first one
+                            if( i == 0 ) {
+                                $(experience_title_ctx).css("opacity", (1-visiblePct).toString());
                             }
 
                             $(scroll_images[i]).css("opacity", visiblePct.toString());
