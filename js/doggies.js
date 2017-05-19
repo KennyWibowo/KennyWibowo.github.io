@@ -1,25 +1,31 @@
-(function($) {
+(function() {
+    // Prefetch the image
+    var image_src = "https://wibow.io/res/doggies.jpg";
+    var image = new Image();
+    image.src = image_src;
+
     // Logic to handle flipping between dog and non-dog backgrounds
-    var dogflip = function(src, elem, onDoggify, onNonDoggify) {
-        var image = new Image();
+    var dogflip = function(elem, onDoggify, onNonDoggify) {
 
         var doggified = false;
 
         if(window.jQuery) {
             var $ = window.jQuery;
+            console.log(elem)
 
             $(elem).click(function() {
                 // Switch between default background and original background
                 if(!doggified) {
-                    onDoggify();
+                    onDoggify($);
                 } else {
-                    onNonDoggify();
+                    onNonDoggify($);
                 }
 
                 doggified = !doggified;
             })
         } else {
             elem.onclick = function() {
+                console.log("derp");
 
                 // Switch between default background and original background
                 if(!doggified) {
@@ -30,43 +36,42 @@
 
                 doggified = !doggified;
             } 
-        }
-        
-
-        // Prefetch the image
-        image.src = src;
+        }   
     }
 
     // non-jQuery vanilla functionality of easter egg.
     var noJQ = function() {
-        var dogtext = document.getElementById("dogtext");
-        var header = document.getElementById("header");
-        var me = document.getElementById("me");
-        
-        var prev_bkg = header.style.backgroundImage;
-        var dogswitch = true;
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var dogtext = document.getElementById("dogtext");
+            var header = document.getElementById("header");
+            var me = document.getElementById("me");
+            
+            var prev_bkg = header.style.backgroundImage;
+            var prev_pos = header.style.backgroundPosition;
+            var dogswitch = true;
 
-        dogflip("https://wibow.io/res/doggies.jpg", dogtext,
-            function onDoggify() {
-                prev_bkg = header.style.backgroundImage;
-                header.style.backgroundImage = 'url("https://wibow.io/res/doggies.jpg")';
+            dogflip(dogtext,
+                function onDoggify() {
+                    prev_bkg = header.style.backgroundImage;
+                    header.style.backgroundImage = 'url("https://wibow.io/res/doggies.jpg")';
 
-                me.style.visibility = "hidden";
-                
-                // Switch between Bella and Chewie
-                if(dogswitch) {
-                    header.style.backgroundPosition = "left top";
-                } else {
-                    header.style.backgroundPosition = "right top";
+                    me.style.visibility = "hidden";
+                    
+                    // Switch between Bella and Chewie
+                    if(dogswitch) {
+                        header.style.backgroundPosition = "left top";
+                    } else {
+                        header.style.backgroundPosition = "right top";
+                    }
+
+                    dogswitch = !dogswitch;
+                }, function onNonDoggify() {
+                    me.style.visibility = "";
+                    header.style.backgroundImage = prev_bkg;
+                    header.style.backgroundPosition = prev_pos;
                 }
-
-                dogswitch = !dogswitch;
-            }, function onNonDoggify() {
-                me.style.visibility = "";
-                header.style.backgroundImage = prev_bkg;
-                header.style.backgroundPosition = "center top";
-            }
-        );
+            );
+        });
     }
 
     // Animated version of easter egg that bounces my face in and out
@@ -94,68 +99,50 @@
             }
         }
 
-        var dogtext = document.getElementById("dogtext");
-        var header = $('#header');
-        var me = $('#me');
-        
-        var prev_bkg = header.css("background-image");
-        var dogswitch = true;
+        $(document).ready(function() {
+            var dogtext = document.getElementById("dogtext");
+            var header = $('#header');
+            var me = $('#me');
+            
+            var prev_bkg = header.css("background-image");
+            var prev_pos = header.css("background-position")
+            var dogswitch = true;
 
-        dogflip("https://wibow.io/res/doggies.jpg", dogtext,
-            function onDoggify() {
-                prev_bkg = header.css("background-image");
-                header.css("background-image", 'url("https://wibow.io/res/doggies.jpg")');
+            dogflip(dogtext,
+                function onDoggify() {
+                    prev_bkg = header.css("background-image");
+                    header.css("background-image", 'url("' + image_src + '")');
 
-                animate(me, "bounceOut", function() {
-                    me.invisible();
-                })
-                
-                // Switch between Bella and Chewie
-                if(dogswitch) {
-                    header.css("background-position", "left top");
-                } else {
-                    header.css("background-position", "right top");
-                }
+                    animate(me, "bounceOut", function() {
+                        me.invisible();
+                    })
+                    
+                    // Switch between Bella and Chewie
+                    if(dogswitch) {
+                        header.css("background-position", "left top");
+                    } else {
+                        header.css("background-position", "right top");
+                    }
 
-                dogswitch = !dogswitch;
-            }, function onNonDoggify() {
-                me.visible();
-                animate(me, "bounceIn", function() {
+                    dogswitch = !dogswitch;
+                }, function onNonDoggify() {
                     me.visible();
-                });
+                    animate(me, "bounceIn", function() {
+                        me.visible();
+                    });
 
-                header.css("background-image", prev_bkg);
-                header.css("background-position", "center top");
-            }
-        );
-    }
-
-    // Cache the previous onload and run any passed in one.
-    var addOnloadEvent = function(event) {
-        if(typeof window.onload != 'function') { 
-            window.onload = event;  // If first in chain, just set onload as function itself
-        } else {
-            // Execute previous onload event
-            var prev = window.onload;
-
-            // Can chain caches within caches for multiple onload functions.
-            window.onload = function() {
-                if(prev) {
-                    prev();
+                    header.css("background-image", prev_bkg);
+                    header.css("background-position", prev_pos);
                 }
-                
-                event();
-            };
-        }
+            );
+        });
     }
 
     // Execute based off of whether we have jQuery.
-    addOnloadEvent(function() {
-        if (window.jQuery) {  
-            yesJQ(window.jQuery);
-        } else {
-            noJQ();
-        }
-    });
+    if (window.jQuery) {  
+        yesJQ(window.jQuery);
+    } else {
+        noJQ();
+    }
 
-})();
+})($);
