@@ -8,7 +8,7 @@
 /* More: http://www.colorhexa.com/96cafd */
 
 html {
-	
+	overflow-x: hidden;
 }
 
 body {
@@ -55,6 +55,10 @@ header {
     line-height: 1.2;
     padding: 6vh 2em 6vh 2em;
     text-align: center;
+
+    @media (max-width: 992px) {
+    	background-attachment: scroll;
+    }
 }
 
 #header {
