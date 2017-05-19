@@ -32,11 +32,38 @@
 
 /* Hide everything when the screen doesn't fit it*/
 @media(max-width: 992px) {
+    .experience-item {
+        -moz-box-shadow: 0 6px 12px rgba(0,0,0,.4);
+        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.4);
+        box-shadow: 0 6px 12px rgba(0,0,0,.4);
+        background-color: rgba(246,255,255,.7);
+        border-radius: 6px;
+        padding-right: 5vw;
+        padding-left: 5vw;
+    }
+
+    .experience-item-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        height: 100vh;
+    }
+
+
     .scroll-panel {
-        display: none;
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        left: 0;
+        top: 120vh;
+        overflow: hidden;
     }
 
     .scroll-image {
-        display: none;
+        position: absolute;
+        left: 0;
+        height: 100vh;
+        opacity: 0;
     }
 }
