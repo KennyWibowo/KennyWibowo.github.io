@@ -43,13 +43,12 @@ a {
 
 header {
     min-height: 100vh;
-    width:auto;
+    overflow-x: hidden;
     background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     line-height: 1.2;
-    max-width: none;
     padding: 6vh 2em 6vh 2em;
     text-align: center;
 }
