@@ -54,6 +54,9 @@ header {
     text-align: center;
 }
 
+#header {
+    background-image: url("https://wibow.io/res/WarrenBear.jpg");
+}
 
 header img {
     display: inline-block;
