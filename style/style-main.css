@@ -7,6 +7,10 @@
 /* Quandary: #022d57 */
 /* More: http://www.colorhexa.com/96cafd */
 
+html {
+	
+}
+
 body {
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 1.7em;
@@ -47,7 +51,7 @@ header {
     background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: auto 100%;
     line-height: 1.2;
     padding: 6vh 2em 6vh 2em;
     text-align: center;
