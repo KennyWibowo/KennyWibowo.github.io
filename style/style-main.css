@@ -45,20 +45,34 @@ a {
     color: #64b1fc;
 }
 
-header {
-    min-height: 100vh;
-    overflow-x: hidden;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: auto 100%;
-    line-height: 1.2;
-    padding: 6vh 2em 6vh 2em;
-    text-align: center;
+@media (min-width: 992px) {
+	header {
+		min-height: 100vh;
+		overflow-x: hidden;
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: auto 100%;
+		line-height: 1.2;
+		padding: 6vh 2em 6vh 2em;
+		text-align: center;
 
-    @media (max-width: 992px) {
-    	background-attachment: scroll;
-    }
+	}	
+}
+
+@media (max-width: 992px) {
+	header {
+		min-height: 100vh;
+		overflow-x: hidden;
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-size: auto 100%;
+		line-height: 1.2;
+		padding: 6vh 2em 6vh 2em;
+		text-align: center;
+
+	}
 }
 
 #header {
