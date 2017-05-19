@@ -508,6 +508,7 @@
 
                 var experience_ctx = document.getElementById("experience-items");
                 var image_panel = document.getElementById("scroll-panel");
+                var languages_ctx = document.getElementById("language-section")
                 var experience_title_ctx = document.getElementById("experience-title");
 
                 var scroll_images = $(".scroll-image");
@@ -522,7 +523,7 @@
 
                     var visible = !(((experienceBottom <= docViewBottom) || (experienceTop >= docViewTop)));
 
-                    var bottomPos = (experienceTop + $(experience_ctx).height() - $(image_panel).height());
+                    var bottomPos = ($(languages_ctx).offset().top - $(image_panel).height());
                     var topPos = $(experience_ctx).offset().top;
 
                     if(visible) {
