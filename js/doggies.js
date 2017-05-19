@@ -11,7 +11,6 @@
 
         if(window.jQuery) {
             var $ = window.jQuery;
-            console.log(elem)
 
             $(elem).click(function() {
                 // Switch between default background and original background
@@ -25,8 +24,6 @@
             })
         } else {
             elem.onclick = function() {
-                console.log("derp");
-
                 // Switch between default background and original background
                 if(!doggified) {
                     onDoggify();
