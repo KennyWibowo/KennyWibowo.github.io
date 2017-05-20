@@ -2,6 +2,20 @@
 
 <html lang="en">
     <head>
+        <script type="text/javascript">
+            // Preload images
+            var images = ["res/WarrenBear.jpg",
+                          "res/experience_backgrounds/amazon.jpg",
+                          "res/experience_backgrounds/hpe.jpg",
+                          "res/experience_backgrounds/obrary.jpg",
+                          "res/experience_backgrounds/slac.jpg",
+                          "res/experience_backgrounds/dvhs.jpg"]
+
+            for(image of images) {
+                var prefetch = new Image();
+                prefetch.src = image;
+            }
+        </script>
         <title>Kenny Wibowo - Portfolio</title>
         <link rel="icon" type="image/png" href="res/favicon.png">
 

@@ -1,19 +1,5 @@
 (function() {
-    // Preload images
-    var images = ["res/WarrenBear.jpg",
-                  "res/experience_backgrounds/amazon.jpg",
-                  "res/experience_backgrounds/hpe.jpg",
-                  "res/experience_backgrounds/obrary.jpg",
-                  "res/experience_backgrounds/slac.jpg",
-                  "res/experience_backgrounds/dvhs.jpg"]
-
-    for(image of images) {
-        var prefetch = new Image();
-        prefetch.src = image;
-    }
-    
-
-    $(document).ready(function() {
+    $(window).ready(function() {
         /* http://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling */
 
         var experience_ctx = document.getElementById("experience-items");
@@ -25,6 +11,7 @@
         var experience_items = $(".experience-item-container");
 
         function update() {
+            var windowHeight = $(window).height();
             var docViewTop = $(window).scrollTop();
             var docViewBottom = docViewTop + $(window).height();
 
@@ -38,13 +25,20 @@
 
             if(visible) {
                 $(image_panel).css("top", "0px");
-                $(image_panel).css("position", "fixed")
+                $(image_panel).css("position", "fixed");
             } else if(experienceBottom <= docViewBottom) {
+                // For when window is below scroll panel
                 $(image_panel).css("top", bottomPos + "px");
-                $(image_panel).css("position", "absolute")
+                $(image_panel).css("position", "absolute");
             } else if(experienceTop >= docViewTop) {
-                $(image_panel).css("top", topPos + "px");
-                $(image_panel).css("position", "absolute")
+                // For when window is above scrollpanel
+                if(windowHeight > topPos) {
+                    $(image_panel).css("top", windowHeight*1.2 + "px");
+                    $(image_panel).css("position", "absolute");
+                } else {
+                    $(image_panel).css("top", topPos + "px");
+                    $(image_panel).css("position", "absolute");
+                }
             }
 
             for(var i = 0; i < experience_items.length; i++) {
