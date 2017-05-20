@@ -1,3 +1,7 @@
+#scroll-panel-anchor {
+    padding-bottom: 33px;
+}
+
 /* Show the scroll panel on the side when screen is large enough */
 @media(min-width: 992px) {
     .scroll-panel {

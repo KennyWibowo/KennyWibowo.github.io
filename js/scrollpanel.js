@@ -60,11 +60,6 @@
 
                     visiblePct *= 2;
 
-                    // start hiding title for first one
-                    if( i == 0 ) {
-                        $(experience_title_ctx).css("opacity", (1-visiblePct).toString());
-                    }
-
                     $(scroll_images[i]).css("opacity", visiblePct.toString());
                 } else {
                     $(scroll_images[i]).css("opacity", "0");
