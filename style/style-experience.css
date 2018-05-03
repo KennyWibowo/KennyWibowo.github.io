@@ -72,7 +72,7 @@
 
     .scroll-image {
         position: absolute;
-        margin-left: 50%;
+        margin: 0 auto;
         transform: translateX(-50%);
         height: 100vh;
         opacity: 0;
